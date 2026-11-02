@@ -13,18 +13,19 @@
 --Grey-500: hsl(234, 12%, 34%);
 --Grey-400: hsl(212, 6%, 44%);
 --White:hsl(0, 0%, 100%);
+--bg: rgb(235,241,241);
 }
 
 body{
-    background-color:var(--White) ;
-    height: 100vh;
+    background-color:var(--bg) ;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #container{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 70%;
 
     display: flex;
@@ -34,7 +35,7 @@ body{
 }
 
 header{
-    border: 2px solid red ;
+    /* border: 2px solid red ; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,28 +55,97 @@ header h2{
     }
 
 .ai-text{
-    border: 2px solid violet;
+    /* border: 2px solid violet; */
     width: 55%;
     text-align: center;
+    line-height: 1.5; 
+    
 }
 
 .cards{
-border: 2px solid slateblue;
+/* border: 2px solid slateblue; */
 width: 100%;
 display: flex;
 flex-direction: row;
 align-items: center;
-justify-content: space-between;
+/* justify-content: space-between; */
+gap: 20px;
+padding: 10px;
+margin-top: 20px;
 }
 .card{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     padding: 15px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    align-items: end;
+    gap: 30px;
     background-color: white;
+border-radius: 7px;
+width: 45%;
+}
+.card div {
+    /* border: 2px solid  red; */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+}
+.card img{
+width: 18%;
+}
+.sup{
+    border-top:4px solid var(--Cyan) ;
+}
+.team{
+    border-top: 4px solid var(--Red);
+    width: 100%;
+}
+.kar{
+    border-top: 4px solid var(--Orange);
+    width: 100%;
+}
+.cal{
+    border-top: 4px solid var(--Blue);
+}
+.middle{
+    display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+/* moblie view  */
+@media screen and (max-width:375px) {
 
-    
-
+    #container{
+        width: 90%;
+        margin: 20px 0;
     }
+    header{
+        gap: 5px;
+        
+    }
+    header p, header h2{
+        font-size: 15px;
+    }
+    .ai-text{
+        width: 100%;
+        line-height: 1.1;
+        font-size: 10px;
+    }
+    .cards{
+        /* border: 2px solid green; */
+        flex-direction: column;
+        
+    }
+    .card{
+        width: 100%;
+    }
+    .card div h2{
+font-size: 17px;
+    }
+    .card div p{
+        font-size: 10px;
+    }
+
+}
